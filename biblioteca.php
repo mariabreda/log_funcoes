@@ -6,3 +6,10 @@ function somar($a, $b, $c)
 {
     return $a + $b;
 }
+
+function subtrair($a, $b)
+{
+    return $a - $b;
+}
+
+echo "resultado: ", subtrair(10, 5);
