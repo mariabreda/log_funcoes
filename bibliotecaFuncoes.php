@@ -1,29 +1,34 @@
 <?php
 
-namespace geometria {
+namespace sistemageometria {
 
-    function areaQuadrado($lado)
+    function calcularImc($peso, $altura)
     {
-        return $lado * $lado;
+        return $peso / ($altura * $altura);
     }
 
-    function  areaRetangulo($base, $altura)
+    function  valorIdealAgua($peso)
     {
-        return $base * $altura;
+        return $peso * 0.035;
     }
 
-    function  areaTriangulo($base, $altura)
+    function  frequenciaCardiacaMaxima($idade)
     {
-        return $base * $altura / 2;
+        return 220 - $idade;
     }
 
-    function   areaCirculo($raio)
+    function  converterLibrasParaQuilo($libras)
     {
-        return $raio * $raio;
+        return $libras * 0.4536;
     }
 
-    function  areaTrapezio($baseMaior, $baseMenor, $altura)
-    {
-        return ($baseMaior + $baseMenor) * $altura / 2;
+    function  calcularCaloriasBasais($peso, $idade, $altura, $sexo)
+    { {
+            if ($sexo == "Maculino") {
+                return 66.5 + (13.75 * $peso) + (5.003 * $altura) - (6.75 * $idade);
+            } else {
+                return 655.1 + (9.563 * $peso) + (1.850 * $altura) - (4.676 * $idade);
+            }
+        }
     }
 }
